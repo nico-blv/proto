@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>:: {% block title %}{% endblock %} | ProFattening ::</title>
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+                function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <!-- Estilos y fuentes -->
+
+        {% load static %}
+
+        <link href="{% static 'core/css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+        <link href="{% static 'core/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+        <link href="{% static 'core/css/flexslider.css' %}" rel="stylesheet" type="text/css" media="screen" property="" />
+        <script type="text/javascript" src="{% static 'core/js/jquery-2.1.4.min.js' %}"></script>
+        
+        <link href='https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
+        <script type="text/javascript" src="{% static 'core/js/move-top.js' %}"></script>
+        <script type="text/javascript" src="{% static 'core/js/easing.js' %}"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $(".scroll").click(function(event){		
+                    event.preventDefault();
+                    $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <!-- header -->
+        <div class="top-nav">
+            <div class="container">
+                <nav class="navbar navbar-default">
+                    <div class="navbar-header navbar-left">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Menu</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    
+                    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                        <nav class="menu menu--shylock">
+                            <ul class="nav navbar-nav link-effect-7" id="link-effect-7">
+                                <li class="active"><a href="/" data-hover="Inicio">Inicio</a></li>
+                                <li><a href="/about/" data-hover="Sobre nosotros">Sobre nosotros</a></li>
+                                <li><a href="/contact/" data-hover="Contactanos">Contactanos</a></li>
+                                <li><a href="/admin" data-hover="ADMIN">ADMIN</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </nav>	
+            </div>	
+        </div>	
+        <!-- //header -->
+        <!-- banner -->
+        <div class="banner">
+            <div class="container">
+                <div class="w3ls_logo">
+                    <h1><a href="/">ProFattening</a></h1>
+                </div>
+                <section class="slider">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <div class="w3l_banner_info">
+                                    <h3>Soluciones administrativas para tu ganaderia</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="w3l_banner_info">
+                                    <h3>Ofrecemos amplio servicio en la region del Bio Bio</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="w3l_banner_info">
+                                    <h3>Soporte 24/7</h3>
+                                </div>
+                            </li>
+                        
+                        </ul>
+                    </div>
+                </section>
+                    <!-- flexSlider -->
+                    <script defer src="{% static 'core/js/jquery.flexslider.js' %}"></script>
+                    <script type="text/javascript">
+                    $(window).load(function(){
+                        $('.flexslider').flexslider({
+                            animation: "slide",
+                            start: function(slider){
+                            $('body').removeClass('loading');
+                            }
+                        });
+                    });
+                </script>
+                <!-- //flexSlider -->
+            </div>
+        </div>
+        <!-- //banner -->
+        <!-- banner-bottom -->
+        <div class="banner-bottom">
+            <div class="container">
+                <div class="col-md-7 wthree_banner_bottom_left">
+                    {% block banner %}{% endblock %}
+                </div>
+                <div class="col-md-5 wthree_banner_bottom_right">
+                    <div class="more">
+                        {% block button %}{% endblock %}
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <!-- //banner-bottom -->
+
+        <!-- Servicios -->
+        {% block service %}{% endblock %}
+        <!-- //Servicios -->
+        <!-- Galeria -->
+        {% block gallery %}{% endblock %}
+        <!-- //Galeria -->
+        <!-- Caracteristicas -->
+        {% block features %}{% endblock %}
+        <!-- //Caracteristicas -->
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="container">
+            {% block footer %}{% endblock %}
+            </div>
+        </div>
+        <!-- //Footer -->
+        <!-- copy-right -->
+        <div class="w3agile_copy_right">
+            <div class="container">
+                <p>© 2021 DataPec. All Rights Reserved 
+            </div>
+        </div>
+        <!-- //copy-right -->
+        <!-- for bootstrap working -->
+	    <script src="{% static 'core/js/bootstrap.js' %}"></script>
+        <!-- //for bootstrap working -->
+        <!-- here stars scrolling icon -->
+        <script type="text/javascript">
+            $(document).ready(function() {
+                /*
+                    var defaults = {
+                    containerID: 'toTop', // fading element id
+                    containerHoverID: 'toTopHover', // fading element hover id
+                    scrollSpeed: 1200,
+                    easingType: 'linear' 
+                    };
+                */
+                                    
+                $().UItoTop({ easingType: 'easeOutQuart' });
+                                    
+                });
+        </script>
+        <!-- //here ends scrolling icon -->
+    </body>
+</html>

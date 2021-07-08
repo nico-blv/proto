@@ -1,0 +1,54 @@
+{% extends 'dashboard/base.html' %}
+{% block title> %}Listado lotes{% endblock %}
+{% block contenido %}
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Listado de Lotes</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Alimento</th>
+                                <th>Raza</th>
+                                <th>Vacunos</th>
+                                <th>Precio real</th>
+                                <th>Precio actual</th>
+                                <th>Fecha update</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>ID</th>
+                                <th>Alimento</th>
+                                <th>Raza</th>
+                                <th>Vacunos</th>
+                                <th>Precio actual</th>
+                                <th>Precio real</th>
+                                <th>Fecha update</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            {% for lt in lot %}
+                                <tr>
+                                    <td>{{ lt.id }}</td>
+                                    <td>{{ lt.tipoAlimen }}</td>
+                                    <td>{{ lt.raza }}</td>
+                                    <td>{{ lt.cantVacuno }}</td>
+                                    <td>{{ lt.precioActual }}</td>
+                                    <td>{{ lt.precioReal }}</td>
+                                    <td>{{ lt.update }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

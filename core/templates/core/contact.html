@@ -1,0 +1,105 @@
+{% extends 'core/basePag.html' %}
+{% block title> %}Contacto{% endblock %}
+{% load static %}
+{% block menu %}
+    <li><a href="/" data-hover="Inicio">Inicio</a></li>
+    <li><a href="/about" data-hover="Sobre nosotros">Sobre nosotros</a></li>
+    <li class="active"><a href="/contact" data-hover="Contactanos">Contactanos</a></li>
+    <li><a href="/admin" data-hover="ADMIN">ADMIN</a></li>
+    <li><a href="/login" data-hover="LOGIN">LOGIN</a></li>
+{% endblock %}
+{% block bread %}
+    <li><a href="/">Home</a><i>|</i></li>
+    <li>Contacto</li>
+{% endblock %}
+{% block tibread %}<h2>CONTACTO</h2>{% endblock %}
+{% block content %}
+    <!-- mail -->
+	<div class="w3_map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7859812.209374686!2d101.30962748076922!3d15.86716175385292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31157a4d736a1e5f%3A0xb03bb0c9e2fe62be!2sVietnam!5e0!3m2!1sen!2sin!4v1461066179025" style="border:0"></iframe>
+	</div>
+	<div class="mail">
+		<div class="container">
+			<h3 class="head"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>Contactanos</h3>
+			<div class="agile_mail_grids">
+				<div class="agile_mail_grid">
+					<form action="#" method="post">
+						<div class="col-md-6 agile_mail_grid_left">
+							<input type="text" name="nombre" placeholder="Nombre" required="">
+							<input type="text" name="celular" placeholder="Celular" required="">
+						</div>
+						<div class="col-md-6 agile_mail_grid_left">
+							<input type="email" name="email" placeholder="Email" required="">
+							<input type="text" name="asunto" placeholder="Asunto" required="">
+						</div>
+						<div class="clearfix"> </div>
+						<textarea name="mensaje" placeholder="Mensaje..." required=""></textarea>
+						<input type="submit" value="Enviar">
+					</form>
+				</div>
+			</div>
+			<div class="agile_mail_grid1">
+				<div class="col-md-4 agile_mail_grid1_left">
+					<div class="mail_grid1_left1">
+						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+						<h4>Contactanos por Email</h4>
+						<ul>
+							<li>Correo 1: <a href="mailto:info@example.com">info@example1.com</a></li>
+							<li>Correo 2: <a href="mailto:info@example.com">info@example2.com</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 agile_mail_grid1_left">
+					<div class="mail_grid1_left1">
+						<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+						<h4>Contactanos por telefono</h4>
+						<ul>
+							<li>Celular: +0000 123 312</li>
+							<li>Telefono: +123 312</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 agile_mail_grid1_left">
+					<div class="mail_grid1_left1">
+						<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+						<h4>Ubicación</h4>
+						<ul>
+							<li>Dirección: General Pvt 66, Dong Da</li>
+							<li>Osorno, Chile.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+    <!-- //mail -->
+{% endblock %} 
+{% block footer %}
+    <div class="col-md-4 agileinfo_footer_grid">
+		<h3>Sobre Nosotros</h3>
+		<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<form action="#" method="post">
+			<input type="email" name="Email" placeholder="Email" required="">
+			<input type="submit" value="Send">
+		</form>
+	</div>
+    <div class="col-md-4 agileinfo_footer_grid">
+		<h3>Post en Twitter</h3>
+		<ul class="w3agile_footer_grid_list">
+			<li>Ut aut reiciendis voluptatibus maiores <a href="#">http://lkj.ewr.com</a> alias, ut aut reiciendis.
+				<span>02 days ago</span></li>
+			<li>Itaque earum rerum hic tenetur a sapiente delectus <a href="#">http://uiubajaj.com</a> ut aut
+						voluptatibus.<span>03 days ago</span></li>
+		</ul>
+	</div>
+    <div class="col-md-4 agileinfo_footer_grid">
+		<h3>Redes Sociales</h3>
+		<ul class="agileinfo_social_icons">
+			<li><a href="#" class="facebook"><span></span><i>-</i>Facebook</a></li>
+			<li><a href="#" class="twitter"><span></span><i>-</i>Twitter</a></li>
+			<li><a href="#" class="google"><span></span><i>-</i>Google+</a></li>
+			<li><a href="#" class="instagram"><span></span><i>-</i>Instagram</a></li>
+		</ul>
+	</div>
+{% endblock %}

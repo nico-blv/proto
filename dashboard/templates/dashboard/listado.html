@@ -1,0 +1,48 @@
+{% extends 'dashboard/base.html' %}
+{% block title> %}Listado{% endblock %}
+{% block contenido %}
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Listado de vacunos</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Peso</th>
+                                <th>Raza</th>
+                                <th>Sexo</th>
+                                <th>Fecha update</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>ID</th>
+                                <th>Peso</th>
+                                <th>Raza</th>
+                                <th>Sexo</th>
+                                <th>Fecha update</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            {% for v in vc %}
+                                <tr>
+                                    <td>{{ v.id }}</td>
+                                    <td>{{ v.peso }}</td>
+                                    <td>{{ v.raza }}</td>
+                                    <td>{{ v.sexo }}</td>
+                                    <td>{{ v.update }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
